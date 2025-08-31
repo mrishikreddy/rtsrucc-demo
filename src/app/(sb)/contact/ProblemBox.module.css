@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Container with Animated Gradient Background */
+.container {
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(
+    45deg,
+    rgb(30, 0, 255),
+    rgb(212, 0, 255)
+  );
+  background-size: 200% 200%;
+  animation: gradientAnimation 15s ease infinite;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* Content Area */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-direction: column;
+  width: 100%;
+  
+}
+
+/* Form with Glassmorphism */
+.InfoDiv{
+  width: 90%;
+  padding-top: 100px;
+  margin-bottom: 5%;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  word-spacing: 1px;
+  max-width: 1000px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-top: 50px;
+  background: rgba(255, 255, 255);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 70%;
+  max-width: 700px;
+  transform: translateY(-50%);
+}
+
+.form input,
+.form textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid silver;
+  color: #3b3b3b;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form textarea{
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+
+}
+
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #0095ff;
+  outline: none;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: silver; /* Change to white */
+  opacity: 1; /* Ensure full opacity */
+}
+
+
+/* Submit Button with Gradient and Glow */
+.submitButton {
+  padding: 10px;
+  background: linear-gradient(90deg, #7700ff, #0800ff, #7700ff);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 2%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.submitButton:hover {
+  box-shadow: 0 0px 10px rgb(255, 255, 255,0.8);
+  background: linear-gradient(90deg, #0800ff, #7b00ff, #0800ff);
+  
+}
+
+/* Success Message with Fade-In Animation */
+.successMessage {
+  margin: auto;
+  width: 95%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(17, 255, 0);
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Error Message */
+.error {
+  display: flex;
+  position: fixed;
+  color: rgb(255, 0, 0);
+  padding: 10px;
+  bottom: 150px;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+}
+
+
+/* Screen-Reader Only Class for Accessibility */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+
+@media(max-width: 900px){
+
+
+  .form input,
+  .form textarea {
+  font-size: 12px;
+  }
+
+}
+
+
+@media(max-width: 600px){
+
+
+  .InfoDiv{
+    width: 90%;
+    margin-top: 5%;
+    text-align: center;
+    font-size: 12px;
+    max-width: 1000px;
+  }
+
+  .form input,
+  .form textarea {
+  padding: 10px;
+  font-size: 12px;
+  }
+
+  
+}
+
+@media(max-height: 900px){
+
+  .form {
+    transform: translateY(-25%);
+  }
+  .error {
+    bottom: 100px;
+  }
+}
+
+
+@media(max-height: 700px){
+
+  .form {
+    transform: translateY(-10%);
+  }
+
+  .error {
+    bottom: 70px;
+  }
+}
+

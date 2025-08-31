@@ -1,0 +1,134 @@
+/* projects/cc/src/app/contact/contact.module.css */
+.container {
+  min-height: 100vh;
+  padding: 1rem;
+  background: linear-gradient(145deg, #0000ff, #00ffd5);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.header {
+  text-align: center;
+  padding: 2rem 0 1rem;
+  animation: slideIn 0.8s ease-out;
+}
+
+.header h1 {
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
+  margin-top:100px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00ff15, #ea00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.header p {
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  color: #d0d0ff;
+  margin: 0.5rem 0 0;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 1000px;
+  padding: 1rem;
+  flex-grow: 1;
+  align-content: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: clamp(1rem, 3vw, 2rem);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.icon svg {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  transition: transform 0.3s ease;
+}
+
+.card:hover .icon svg {
+  transform: scale(1.15);
+  color: #00fff2;
+}
+
+.name {
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.footer {
+  padding: 1rem;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .cardGrid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .container {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-height: 600px) {
+  .container {
+    min-height: auto;
+    height: 100vh;
+  }
+  
+  .cardGrid {
+    padding: 0.5rem;
+  }
+  
+  .header {
+    padding: 1rem 0 0.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cardGrid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}

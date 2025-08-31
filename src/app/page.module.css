@@ -1,0 +1,752 @@
+/* Container */
+.container {
+  margin-top: 70px;
+  display: flex;
+  width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  margin-top: 60px;
+  width: 15%;
+  min-width: 100px;
+  background: #333;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebarContent {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.sidebarTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li a:hover {
+  background: linear-gradient(135deg, #004cff, #00bbff );
+  border-radius: 5px;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: block;
+  padding: 10px;
+}
+
+.active {
+  font-weight: bold;
+  color: #0070f3;
+}
+
+.socialLinks {
+  width: 15%;
+  position: fixed;
+  bottom: 50px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.followText {
+  font-size: 14px;
+  color: #ddd;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icon {
+  font-size: 24px;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.icon:hover {
+  color: #00ccff;
+}
+
+/* Fixed Details Header */
+.detailsHeader {
+  position: fixed;
+  top: 60px; /* Adjust to fit under navbar */
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 15px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensures it stays above the content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainContent {
+  flex-grow: 1;
+  margin-left: 20%;
+  padding: 20px;
+  overflow-x: auto;
+  padding-top: 70px;
+}
+
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  width: 100%;
+  height: 300px;
+  color: white;
+  background-image: url('/banner.png'); /* assuming banner.png is in the public folder */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 3rem;
+  border-radius: 10px;
+}
+
+
+.sectionTitle{
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Search Bar */
+.searchBar {
+  width: 98%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Table */
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  table-layout: fixed;
+}
+
+.table th, .table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+  position: relative;
+}
+
+.table td:hover {
+  overflow: visible;
+  white-space: nowrap;
+  text-overflow: clip;
+}
+
+.table td::-webkit-scrollbar {
+  height: 5px;
+}
+
+.table th {
+  background: #0070f3;
+  color: white;
+  cursor: pointer;
+}
+
+.sortable:hover {
+  background: #005bb5;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.pagination button {
+  padding: 7px 12px;
+  border: none;
+  background: #0070f3;
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.pagination button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Fixed Hamburger Button */
+.hamburger {
+  display: none;
+  position: fixed; /* Fixed so it doesn't scroll */
+  top: 20px; /* Adjust to align with navbar */
+  left: 20px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  z-index: 1100; /* Keeps it above other elements */
+}
+
+.examCard {
+  background: linear-gradient(135deg, #fb00ff, #114cd7);
+  color: white;
+  padding: 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  margin: 5rem auto;
+  max-width: 700px;
+}
+
+.examCard:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #04eb00, #0000ff);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+}
+
+.examInner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.timer {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 30%;
+  min-width: 250px;
+}
+
+
+.timerHeading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.timerText {
+  font-size: 1.7rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.date {
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.resources {
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.resources:hover{
+  color: rgb(0, 247, 255);
+}
+
+
+
+
+
+
+
+.footerWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.footerContent p {
+  margin: 0;
+}
+
+.footerContent strong {
+  color: #ffea00;
+}
+
+
+.cp:hover{
+  color: rgb(0, 153, 255);
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+
+  .searchBar {
+    width: 97%;
+  }
+
+  .table td:hover {
+    overflow-x: auto;
+    display: block;
+  }
+  .socialLinks {
+    bottom: 10px;
+  }
+}
+
+@media (max-width: 1000px){
+
+
+  .sidebarTitle {
+    font-size: 1.4rem;
+  }
+  
+  
+  .sidebar ul li a:hover {
+    background: #0070f3;
+    border-radius: 5px;
+  }
+  
+  .sidebar ul li {
+    margin: 10px 0;
+  }
+  
+  .sidebar ul li a {
+    font-size: 1rem;
+    padding: 5px;
+  }
+  
+ 
+  
+  /* Fixed Details Header */
+  .detailsHeader {
+    top: 60px; /* Adjust to fit under navbar */
+  }
+  
+  /* Main Content */
+  .mainContent {
+    padding-top: 60px; /* Prevent overlap with fixed header */
+  }
+
+  .banner {
+    width: 100%;
+    height: 250px;
+    margin-top: 20px;
+  }
+
+  .examCard{
+    margin-bottom: 110px;
+  }
+
+  .sectionTitle{
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .searchBar {
+    width: 96%;
+  }
+
+
+.socialLinks {
+  padding: 5px;
+}
+
+.followText {
+  font-size: 12px;
+}
+
+
+.icon {
+  font-size: 18px;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+}
+
+/* Mobile View - Sidebar and Hamburger */
+@media (max-width: 700px) {
+  .sidebar {
+    width: 250px;
+    margin-top: 80px;
+    transform: translateX(-100%);
+    position: fixed;
+    z-index: 1000;
+    padding-top: 10px;
+  }
+
+  .socialLinks {
+    width: 250px;
+    bottom: 120px;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 1100;
+  }
+
+  .mainContent {
+    margin-left: 0;
+    width: 100%;
+    padding-top: 10px; /* Adjusted to prevent overlap */
+  }
+
+  .searchBar {
+    width: 96%;
+  }
+
+  .sectionTitle{
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+
+  .table th, .table td {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 600px) {
+  .sidebar {
+    width: 50%;
+  }
+
+  .sidebarTitle {
+    font-size: 1.4rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    padding: 10px;
+  }
+
+
+  .socialLinks {
+    width: 70%;
+    bottom: 120px;
+  }
+
+  .searchBar {
+    width: 95%;
+  }
+
+  .pagination {
+    gap: 10px;
+  }
+
+  .banner {
+    margin-top: 20px;
+    height: 200px;
+  }
+
+  .examCard {
+    background: linear-gradient(135deg, #fb00ff, #114cd7);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    margin: 60px auto;
+    width: 70%;
+  }
+  
+  .examCard:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #04eb00, #0000ff);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+  }
+
+
+  .examInner {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+.examDetails {
+  flex: 1;
+}
+
+.timer {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 20px;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 200px;
+}
+
+.timerHeading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.timerText {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.date {
+  font-size: 0.7rem;
+  opacity: 0.85;
+}
+
+.resources {
+  font-size: 0.7rem;
+  opacity: 0.85;
+}
+
+.footerContent {
+  font-size: 0.8rem;
+  line-height: 1.2;
+}
+
+}
+
+
+@media (max-width: 400px) {
+  .searchBar {
+    width: 94%;
+  }
+
+  .mainContent {
+    flex-grow: 1;
+    padding: 5px;
+    padding-top: 10px;
+    overflow-x: auto;
+  }
+
+  .banner {
+    width: 100%;
+    margin-top: 10px;
+    height: 200px;
+  }
+
+}
+
+
+
+
+@media (max-height: 700px)
+{
+  .sidebarTitle {
+    font-size: 1rem;
+  }
+  
+  
+  .sidebar ul li a:hover {
+    background: #0070f3;
+    border-radius: 5px;
+  }
+  
+  .sidebar ul li {
+    margin: 5px 0;
+  }
+  
+  .sidebar ul li a {
+    font-size: 0.9rem;
+    padding: 5px;
+  }
+  
+ 
+  
+  /* Fixed Details Header */
+  .detailsHeader {
+    top: 60px; /* Adjust to fit under navbar */
+  }
+  
+  /* Main Content */
+  .mainContent {
+    padding-top: 60px; /* Prevent overlap with fixed header */
+  }
+
+
+.socialLinks {
+  padding: 5px;
+}
+
+.followText {
+  font-size: 12px;
+}
+
+
+.icon {
+  font-size: 18px;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+}
+
+
+
+@media (max-height: 560px) and (min-width:700px)
+{
+
+  .sidebar {
+    margin-top: 50px;
+  }
+  
+  .sidebarTitle {
+    font-size: 1rem;
+    margin-bottom: 0rem;
+  }
+  
+  
+  .sidebar ul li a:hover {
+    background: #0070f3;
+    border-radius: 5px;
+  }
+  
+  .sidebar ul li {
+    margin: 5px 0;
+  }
+  
+  .sidebar ul li a {
+    font-size: 0.7rem;
+    padding: 2px;
+  }
+  
+ 
+  
+  /* Fixed Details Header */
+  .detailsHeader {
+    top: 60px; /* Adjust to fit under navbar */
+  }
+  
+  /* Main Content */
+  .mainContent {
+    padding-top: 60px; /* Prevent overlap with fixed header */
+  }
+
+
+.socialLinks {
+  padding: 2px;
+  bottom: 20px;
+}
+
+.followText {
+  font-size: 12px;
+}
+
+
+.icon {
+  font-size: 18px;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+}

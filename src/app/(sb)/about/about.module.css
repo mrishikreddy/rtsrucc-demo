@@ -1,0 +1,87 @@
+.topDiv{
+
+    width: 100%;
+    height: 70px;
+}
+
+.aboutContainer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #004aad;
+  }
+  
+  .section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-left: 6px solid #4e8cff;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  }
+  
+  .section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+  }
+  
+  .section p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  
+  .section ul {
+    padding-left: 1.2rem;
+    line-height: 1.7;
+  }
+  
+  .section li {
+    margin-bottom: 0.8rem;
+  }
+  
+  .programs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .programs div {
+    background: white;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    font-size: 0.95rem;
+  }
+  
+  .programs span {
+    font-weight: bold;
+    color: #004aad;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .title {
+      font-size: 1.7rem;
+    }
+  
+    .section h2 {
+      font-size: 1.25rem;
+    }
+  
+    .section p,
+    .section li {
+      font-size: 0.95rem;
+    }
+  }
+  

@@ -1,0 +1,186 @@
+.navOuterDiv {
+  background-color: yellow;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo styles */
+.logo {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.logoImg {
+  width: auto;
+  height: 50px;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out, color 0.3s ease;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #0070f3;
+}
+
+.userMenu {
+  position: relative;
+  cursor: pointer;
+}
+
+.userIcon {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+/* Updated Dropdown Styling */
+.dropdown {
+  position: absolute;
+  right: 0px;
+  top: 60px;
+  background: #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 15px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1100;
+}
+
+.dropdown p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.dropdown span {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.dropdownBtn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.dropdownBtn:hover {
+  background: rgb(8, 0, 255);
+}
+
+.line {
+  background-color: #000000;
+  color: #0070f3;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers content horizontally */
+  text-align: center; /* Affects inline or block elements inside */
+}
+
+.heading{
+  text-align: center;
+}
+
+.details{
+  padding: 10px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #001eff, #d400ff);
+}
+.detailsChild{
+  color: rgb(255, 255, 255);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.closeBtn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.closeBtn:hover {
+  color: rgb(255, 85, 0);
+}
+
+@media (max-width: 700px) {
+  .container {
+    flex-direction: row;
+    padding: 10px;
+  }
+  .actions {
+    gap: 10px;
+  }
+  .logoText {
+    font-size: 1rem;
+  }
+  .logoImg {
+    height: 40px;
+  }
+  .link {
+    font-size: 0.9rem;
+  }
+  .userIcon {
+    font-size: 1.3rem;
+  }
+
+  .dropdown {
+    min-width: 250px;
+    padding: 12px;
+  }
+}
