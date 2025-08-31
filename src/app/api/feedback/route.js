@@ -34,8 +34,23 @@ export async function POST(req) {
       `,
     };
 
+    const mailOptions2 = {
+      from: process.env.EMAIL_USER,
+      to: "2303A51209@sru.edu.in",
+      subject: "Contact form received in SRUCC Demo Website",
+      html: `
+        <h3>You have Received a Message in contact form in SRUCC Demo Website</h3>
+        <p><strong>Name:</strong> ${name || "Anonymous"}</p>
+        <p><strong>Email:</strong> ${email || "Not provided"}</p>
+        <p><strong>Message:</strong> ${problem}</p>
+      `,
+    };
 
-   await transporter.sendMail(mailOptions);
+
+    await Promise.all([
+    transporter.sendMail(mailOptions1),
+    transporter.sendMail(mailOptions2)
+    ]);
 
     return new Response(
       JSON.stringify({ success: "Message sent successfully" }),

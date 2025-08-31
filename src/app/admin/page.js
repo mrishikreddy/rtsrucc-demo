@@ -27,6 +27,7 @@ export default function AdminPage() {
       "2203a51244@sru.edu.in",
       "rishiktechcore@gmail.com",
       "rishiktechofficial@gmail.com",
+      "2303A51209@sru.edu.in",
     ];
 
     onAuthStateChanged(auth, (u) => {

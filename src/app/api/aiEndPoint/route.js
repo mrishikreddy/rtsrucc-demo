@@ -33,8 +33,8 @@ export async function POST(req) {
 
     let tempVar = ""
     const prompt = CiaoData + `\n\nUser Query: ${rawText}`;
-    KEY1 = process.env.KEY1;
-    KEY2 = process.env.KEY2;
+    const KEY1 = "AIzaSyCFwZWTShNzF9dpHTrlj8ndI3Dvidl6_18";
+    const KEY2 = "AIzaSyA_mdi4vQpdvJ3xfZU3wWPkL_wi7CQ3IEw";
 
     try{
     const genAI = new GoogleGenerativeAI(KEY1);
